@@ -1,5 +1,15 @@
 @extends('layouts.frontend.app')
 
+@section('title', 'Home')
+
+@push('css')
+
+    <link href="{{asset('assets/frontend/css/home/styles.css')}}" rel="stylesheet">
+
+    <link href="{{asset('assets/frontend/css/home/responsive.css')}}" rel="stylesheet">
+
+@endpush
+
 @section('content')
     <div class="main-slider">
         <div class="swiper-container position-static" data-slide-effect="slide" data-autoheight="false"
@@ -410,4 +420,9 @@
 
         </div><!-- container -->
     </section><!-- section -->
+    @push('js')
+    
+    <script src="{{asset('assets/frontend/js/common-js/swiper.js')}}"></script>
+
+    @endpush
 @endsection

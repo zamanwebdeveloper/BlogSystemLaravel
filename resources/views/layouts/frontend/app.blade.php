@@ -23,8 +23,9 @@
 
     <link href="{{asset('assets/frontend/css/ionicons.css')}}" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
 
-    
+
     @stack('css')
 </head>
 <body>
@@ -44,6 +45,9 @@
 
 
     <script src="{{asset('assets/frontend/js/common-js/scripts.js')}}"></script>
+
+    <script src="https://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+    {!! Toastr::message() !!}
 
     @stack('js')
     

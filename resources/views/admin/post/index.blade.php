@@ -13,7 +13,7 @@
         <div class="block-header">
             <a class="btn btn-primary waves-effect" href="{{route('admin.post.create')}}">
                 <i class="material-icons">add</i>
-                <span> Add New Category</span>
+                <span> Add New Post</span>
             </a>
         </div>
 

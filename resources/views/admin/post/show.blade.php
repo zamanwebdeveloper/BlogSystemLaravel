@@ -71,7 +71,7 @@
 
                         </div>
                         <div class="body">
-                            <img class="img-responsive thumbnail" src="{{ \Illuminate\Support\Facades\Storage::disk('public')->url('post/'.$post->image)}}" alt="image">
+                            <img class="img-responsive thumbnail" src="{{ \Illuminate\Support\Facades\Storage::disk('public')->URL('post/'.$post->image)}}" alt="image">
                         </div>
                     </div>
                 </div>

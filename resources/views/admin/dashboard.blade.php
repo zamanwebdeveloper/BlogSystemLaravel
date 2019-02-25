@@ -65,6 +65,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="card">
                         <div class="header">
+                            NEW TASKS
                             <div class="row clearfix">
                                 <div class="col-xs-12 col-sm-6">
                                     <h2>CPU USAGE (%)</h2>

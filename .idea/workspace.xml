@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c61be18-c5de-463d-98c1-cf8f415a0fcb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/post/pending.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blog.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/post/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/post/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/backend/inc/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/backend/inc/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Author/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Author/PostController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,11 +38,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/post/pending.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="243">
               <caret line="91" column="48" selection-start-line="91" selection-start-column="44" selection-end-line="91" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Author/PostController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="328">
+              <caret line="215" lean-forward="true" selection-start-line="215" selection-end-line="215" />
+              <folding>
+                <element signature="e#47#64#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -169,7 +174,6 @@
         <option value="$PROJECT_DIR$/resources/views/author/post/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/author/post/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/author/post/show.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Author/PostController.php" />
         <option value="$PROJECT_DIR$/resources/views/author/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/backend/inc/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/post/index.blade.php" />
@@ -178,6 +182,7 @@
         <option value="$PROJECT_DIR$/app/Post.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/PostController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/post/pending.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Author/PostController.php" />
       </list>
     </option>
   </component>
@@ -319,7 +324,7 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
               <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
+              <item name="Author" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BlogSystemLaravel" type="b2602c69:ProjectViewProjectNode" />
@@ -486,12 +491,12 @@
       <workItem from="1551109042514" duration="1348000" />
       <workItem from="1551112049227" duration="2860000" />
       <workItem from="1551148297764" duration="1264000" />
-      <workItem from="1551156069927" duration="15839000" />
+      <workItem from="1551156069927" duration="16868000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140224000" />
+    <option name="totallyTimeSpent" value="141253000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -823,16 +828,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Author/PostController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="202" selection-start-line="202" selection-end-line="202" />
-          <folding>
-            <element signature="e#47#64#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/frontend/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -896,6 +891,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="91" column="48" selection-start-line="91" selection-start-column="44" selection-end-line="91" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Author/PostController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="215" lean-forward="true" selection-start-line="215" selection-end-line="215" />
+          <folding>
+            <element signature="e#47#64#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

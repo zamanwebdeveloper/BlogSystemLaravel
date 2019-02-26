@@ -104,6 +104,11 @@ class PostController extends Controller
      */
     public function show(post $post)
     {
+        if ($post->user_id != Auth::id())
+        {
+            Toastr::error('You are not authorized to access this post.', 'Error');
+            return redirect()->back();
+        }
         return view('author.post.show',compact('post'));
     }
 
@@ -115,6 +120,12 @@ class PostController extends Controller
      */
     public function edit(post $post)
     {
+        if ($post->user_id != Auth::id())
+        {
+            Toastr::error('You are not authorized to access this post.', 'Error');
+            return redirect()->back();
+        }
+
         $categories = Category::all();
         $tags = Tag::all();
         return view('author.post.edit', compact('post','categories','tags'));
@@ -129,6 +140,12 @@ class PostController extends Controller
      */
     public function update(Request $request, post $post)
     {
+        if ($post->user_id != Auth::id())
+        {
+            Toastr::error('You are not authorized to access this post.', 'Error');
+            return redirect()->back();
+        }
+
         $this->validate($request,[
             'title' => 'required',
             'image' => 'image',
@@ -191,6 +208,12 @@ class PostController extends Controller
      */
     public function destroy(post $post)
     {
+        if ($post->user_id != Auth::id())
+        {
+            Toastr::error('You are not authorized to access this post.', 'Error');
+            return redirect()->back();
+        }
+
         if (Storage::disk('public')->exists('post/'.$post->image))
         {
             Storage::disk('public')->delete('post/'.$post->image);

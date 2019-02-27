@@ -4,12 +4,15 @@ namespace App\Http\Controllers\Admin;
 
 use App\Category;
 use App\Notifications\AuthorPostApproved;
+use App\Notifications\NewPostNotify;
 use App\Post;
+use App\Subscriber;
 use App\Tag;
 use Carbon\Carbon;
 use Faker\Provider\Image;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Notifications\Notification;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
@@ -91,7 +94,15 @@ class PostController extends Controller
         $post->categories()->attach($request->categories);
         $post->tags()->attach($request->tags);
 
-        \Brian2694\Toastr\Facades\Toastr::success('Post Successfully Saved', 'Success');
+        $subscribers = Subscriber::all();
+        foreach ($subscribers as $subscriber)
+            {
+                \Illuminate\Support\Facades\Notification::route('mail', $subscriber->email)
+                    ->notify(new NewPostNotify($post));
+
+            }
+
+        \Brian2694\Toastr\Facades\Toastr::success('Post Successfully Created', 'Success');
         return redirect()->route('admin.post.index');
 
     }
@@ -196,6 +207,15 @@ class PostController extends Controller
             $post->is_approved = true;
             $post->save();
             $post->user->notify(New AuthorPostApproved($post));
+
+            $subscribers = Subscriber::all();
+            foreach ($subscribers as $subscriber)
+            {
+                \Illuminate\Support\Facades\Notification::route('mail', $subscriber->email)
+                    ->notify(new NewPostNotify($post));
+
+            }
+
             \Brian2694\Toastr\Facades\Toastr::success('Post Successfully Approved :) ', 'Success');
         }
         else

@@ -15,9 +15,7 @@
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
-    return view('index');
-})->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 
 Route::post('subscriber', 'SubscriberController@store')->name('subscriber.store');
 

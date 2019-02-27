@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Category;
+use App\Notifications\AuthorPostApproved;
 use App\Post;
 use App\Tag;
-use Brian2694\Toastr\Toastr;
 use Carbon\Carbon;
 use Faker\Provider\Image;
 use Illuminate\Http\Request;
@@ -195,6 +195,7 @@ class PostController extends Controller
         {
             $post->is_approved = true;
             $post->save();
+            $post->user->notify(New AuthorPostApproved($post));
             \Brian2694\Toastr\Facades\Toastr::success('Post Successfully Approved :) ', 'Success');
         }
         else

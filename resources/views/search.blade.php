@@ -1,6 +1,8 @@
 @extends('layouts.frontend.app')
 
-@section('title', 'Category')
+@section('title')
+    {{$query}}
+@endsection
 
 @push('css')
 
@@ -10,12 +12,6 @@
 
 
     <style>
-        .slider {
-            height: 400px;
-            width: 100%;
-            background-image: url({{Storage::disk('public')->url('category/'.$category->image)}});
-            background-size: cover;
-        }
         .favorite_posts{
             color: blue;
         }
@@ -24,7 +20,7 @@
 
 @section('content')
     <div class="slider display-table center-text">
-        <h1 class="title display-table-cell"><b>{{$category->name}}</b></h1>
+        <h1 class="title display-table-cell"><b>{{$posts->count()}} Results for {{$query}}</b></h1>
     </div><!-- slider -->
 
     <section class="blog-area section">
@@ -75,7 +71,7 @@
                         </div><!-- col-lg-4 col-md-6 -->
                     @endforeach
                 @else
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-12 col-md-12">
                         <div class="card h-100">
                             <div class="single-post post-style-1">
 

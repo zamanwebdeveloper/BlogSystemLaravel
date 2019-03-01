@@ -24,6 +24,8 @@ Route::get('tag/{slug}','PostController@postByTag')->name('tag.posts');
 
 Route::post('subscriber', 'SubscriberController@store')->name('subscriber.store');
 
+Route::get('search','SearchController@search')->name('search');
+
 Auth::routes();
 
 Route::group(['middleware' => ['auth']],function (){
@@ -70,4 +72,9 @@ Route::group(['as'=>'author.','prefix'=>'author','namespace'=>'Author', 'middlew
     Route::resource('post', 'PostController');
 
     Route::get('/favorite', 'FavoriteController@index')->name('favorite.index');
+});
+
+View::composer('layouts.frontend.inc.footer',function ($view){
+    $categories = App\Category::all();
+    $view->with('categories',$categories);
 });

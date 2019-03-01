@@ -8,8 +8,20 @@
 
             <ul class="main-menu visible-on-click" id="main-menu">
                 <li><a href="{{route('home')}}">Home</a></li>
-                <li><a href="{{url('/login')}}">Login</a></li>
-                <li><a href="#">Categories</a></li>
+                <li><a href="{{route('post.index')}}">Posts</a></li>
+                @guest
+                    <li><a href="{{url('/login')}}">Login</a></li>
+                @else
+                    @if(Auth::user()->role->id == 1)
+                        <li><a href="{{url('admin/dashboard')}}">Dashboard</a></li>
+                    @endif
+                    @if(Auth::user()->role->id == 2)
+                        <li><a href="{{url('author/dashboard')}}">Dashboard</a></li>
+                    @endif
+                @endguest
+
+
+
                 <li><a href="#">Features</a></li>
             </ul><!-- main-menu -->
 

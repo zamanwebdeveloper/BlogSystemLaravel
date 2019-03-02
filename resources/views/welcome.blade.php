@@ -54,15 +54,13 @@
 
             <div class="row">
                 @foreach($posts as $post)
-
-
                 <div class="col-lg-4 col-md-6">
                     <div class="card h-100">
                         <div class="single-post post-style-1">
 
                             <div class="blog-image"><img src="{{Storage::disk('public')->url('post/'.$post->image)}}" alt="{{$post->title}}"></div>
 
-                            <a class="avatar" href="#"><img src="{{Storage::disk('public')->url('profile/'.$post->user->image)}}" alt="Profile Image"></a>
+                            <a class="avatar" href="{{route('author.profile',$post->user->username)}}"><img src="{{Storage::disk('public')->url('profile/'.$post->user->image)}}" alt="Profile Image"></a>
 
                             <div class="blog-info">
 
@@ -100,13 +98,12 @@
                         </div><!-- single-post -->
                     </div><!-- card -->
                 </div><!-- col-lg-4 col-md-6 -->
-
                 @endforeach
 
 
             </div><!-- row -->
 
-            <a class="load-more-btn" href="#"><b>LOAD MORE</b></a>
+            {{--<a class="load-more-btn" href="#"><b>LOAD MORE</b></a>--}}
 
         </div><!-- container -->
     </section><!-- section -->

@@ -39,10 +39,10 @@
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <div class="info-box bg-light-green hover-expand-effect">
                         <div class="icon">
-                            <i class="material-icons">librari_book</i>
+                            <i class="material-icons">library_book</i>
                         </div>
                         <div class="content">
-                            <div class="text">PANDING POSTS</div>
+                            <div class="text">PENDING POSTS</div>
                             <div class="number count-to" data-from="0" data-to="{{$total_panding_posts}}" data-speed="1000" data-fresh-interval="20"></div>
                         </div>
                     </div>

@@ -51,6 +51,9 @@ Route::group(['as'=>'admin.','prefix'=>'admin','namespace'=>'Admin', 'middleware
 
     Route::get('/favorite', 'FavoriteController@index')->name('favorite.index');
 
+    Route::get('authors','AuthorController@index')->name('author.index');
+    Route::delete('authors/{id}','AuthorController@destroy')->name('destroy.index');
+
     Route::get('comments', 'CommentController@index')->name('comment.index');
     Route::delete('comments/{id}', 'CommentController@destroy')->name('comment.destroy');
 
